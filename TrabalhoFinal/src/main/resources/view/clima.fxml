@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         fx:controller="com.example.Mensageria2.MensageriJavaFx.MensagemController"
+         style="-fx-padding: 10;">
+
+    <!-- Abas principais -->
+    <tabs>
+
+        <!-- Aba de Enviar Mensagem -->
+        <Tab text="Enviar Alerta">
+            <VBox spacing="10" alignment="CENTER" style="-fx-padding: 20; -fx-background-color: #f4f4f4;">
+                <Label text="Enviar Alerta Climático" style="-fx-font-size: 18; -fx-font-weight: bold;" />
+
+                <TextField fx:id="txtNome" promptText="Nome do Alerta" />
+                <TextArea fx:id="txtDescricao" promptText="Descrição do Alerta" />
+                <TextField fx:id="txtEstado" promptText="Estado" />
+                <ComboBox fx:id="cmbNivelSeveridade" promptText="Nível de Severidade" />
+                <TextField fx:id="txtTipoEvento" promptText="Tipo de Evento" />
+                <TextField fx:id="txtLatitude" promptText="Latitude" />
+                <TextField fx:id="txtLongitude" promptText="Longitude" />
+
+                <Button fx:id="btnEnviar" text="Enviar Alerta" onAction="#enviarMensagem" style="-fx-font-size: 14;" />
+            </VBox>
+        </Tab>
+
+        <!-- Aba de Visualização de Tabelas -->
+        <Tab text="Visualizar Dados">
+            <VBox spacing="10" alignment="TOP_LEFT" style="-fx-padding: 10;">
+                <Label text="Dados do Sistema" style="-fx-font-size: 18; -fx-font-weight: bold;" />
+
+                <TabPane>
+                    <!-- Tabela de Alertas Climáticos -->
+                    <Tab text="Alertas Climáticos">
+                        <VBox spacing="10">
+                            <TableView fx:id="tabelaAlertas">
+                                <columns>
+                                    <TableColumn fx:id="colIdAlerta" text="ID" />
+                                    <TableColumn fx:id="colTipoAlerta" text="Tipo de Alerta" />
+                                    <TableColumn fx:id="colDescricaoAlerta" text="Descrição" />
+                                    <TableColumn fx:id="colCidadeMonitorada" text="Cidade Monitorada" />
+                                    <TableColumn fx:id="colDataEmissao" text="Data de Emissão" />
+                                </columns>
+                            </TableView>
+                        </VBox>
+                    </Tab>
+
+                    <!-- Tabela de Cidades Monitoradas -->
+                    <Tab text="Cidades Monitoradas">
+                        <VBox spacing="10">
+                            <TableView fx:id="tabelaCidades">
+                                <columns>
+                                    <TableColumn fx:id="colIdCidade" text="ID" />
+                                    <TableColumn fx:id="colNomeCidade" text="Nome" />
+                                    <TableColumn fx:id="colEstadoCidade" text="Estado" />
+                                    <TableColumn fx:id="colNivelSeveridadeCidade" text="Nível de Severidade" />
+                                    <TableColumn fx:id="colLatitudeCidade" text="Latitude" />
+                                    <TableColumn fx:id="colLongitudeCidade" text="Longitude" />
+                                </columns>
+                            </TableView>
+                        </VBox>
+                    </Tab>
+
+                    <!-- Tabela de Notificações -->
+                    <Tab text="Notificações">
+                        <VBox spacing="10">
+                            <TableView fx:id="tabelaNotificacoes">
+                                <columns>
+                                    <TableColumn fx:id="colIdNotificacao" text="ID" />
+                                    <TableColumn fx:id="colIdAlertaNotificacao" text="ID Alerta" />
+                                    <TableColumn fx:id="colMensagem" text="Mensagem" />
+                                    <TableColumn fx:id="colDestinatario" text="Destinatário" />
+                                    <TableColumn fx:id="colDataEnvio" text="Data de Envio" />
+                                </columns>
+                            </TableView>
+                        </VBox>
+                    </Tab>
+                </TabPane>
+            </VBox>
+        </Tab>
+    </tabs>
+</TabPane>

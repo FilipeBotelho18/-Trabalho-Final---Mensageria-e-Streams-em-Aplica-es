@@ -1,0 +1,15 @@
+com\example\Mensageria2\Controllers\CidadeMonitoradaController.class
+com\example\Mensageria2\Controllers\AlertaClimaticoController.class
+com\example\Mensageria2\Services\CidadeMonitoradaService.class
+com\example\Mensageria2\Controllers\HistoricoNotificacaoController.class
+com\example\Mensageria2\Services\AlertaClimaticoService.class
+com\example\Mensageria2\Mensageria2Application.class
+com\example\Mensageria2\Persistence\AlertaClimaticoRepository.class
+com\example\Mensageria2\Producer.class
+com\example\Mensageria2\Entities\CidadeMonitorada.class
+com\example\Mensageria2\Services\HistoricoNotificacaoService.class
+com\example\Mensageria2\Entities\AlertaClimatico.class
+com\example\Mensageria2\Consumer.class
+com\example\Mensageria2\Entities\HistoricoNotificacao.class
+com\example\Mensageria2\Persistence\CidadeMonitoradaRepository.class
+com\example\Mensageria2\Persistence\HistoricoNotificacaoRepository.class
